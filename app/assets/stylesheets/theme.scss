@@ -1,0 +1,172 @@
+html {
+  font-size: 100%;
+  text-align: center;
+  color: $blk;
+}
+
+body {
+  background-color: $blu;
+  font-family: 'courier';
+  color: $blk;
+  font-size: 12px;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 14px;
+  }
+}
+
+.main {
+  padding: 1em 1em;
+
+  @media (min-width: $screen-md-min) {
+    padding: 2em 2em;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    padding: 2em 3em;
+  }
+}
+
+a {
+  color: $blu;
+  font-style: italic;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 3em;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+nav {
+  background: $wht;
+  color: $blu;
+
+  li.active {
+    a {
+      color: $wht;
+      background: $blu !important;
+    }
+  }
+
+  a {
+    color: $blu;
+    text-transform: uppercase;
+    font-size: 1.75em;
+    padding: 10px;
+
+    @media (max-width: $screen-xs-max) {
+      margin: 0.5em 0;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 1em;
+    }
+
+    &:hover {
+      color: $wht;
+      background: $blu !important;
+    }
+
+    &:focus {
+      color: $blu;
+      background: $wht !important;
+      padding: 15px 14px;
+
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        padding: 11px 10px;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    background-color: $blu;
+
+    .icon-bar {
+      background-color: $wht;
+    }
+  }
+
+  .navbar-nav > li > a {
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      font-size: 1em;
+      padding: 11px;
+    }
+  }
+}
+
+
+
+.text-link {
+  color: $blu;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $blu;
+    text-decoration: underline;
+  }
+
+  a {
+    color: $blu;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $blu;
+      text-decoration: underline;
+    }
+  }
+}
+
+.hidden-link {
+  color: $blk;
+  text-decoration: none;
+  font-style: normal !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $blu;
+    text-decoration: underline;
+  }
+
+  a {
+    color: $blk;
+    text-decoration: none;
+    font-style: normal !important;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $blu;
+      text-decoration: underline;
+    }
+  }
+}
+
+.col-xs-12 {
+  @media (min-width: $screen-sm-min) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

@@ -1,0 +1,65 @@
+.welcome.index {
+  .contact-tile {
+    text-align: center;
+    padding: 1em;
+
+    @media (min-width: $screen-lg-min) {
+      p {
+        font-size: 1.25em
+      }
+    }
+  }
+
+  .name-tile {
+    color: $blu;
+  }
+
+  twitterwidget {
+    margin-top: 0 !important;
+  }
+}
+
+.welcome.video {
+  .content-tile {
+    background: transparent;
+    margin: 1%;
+    display: inline-block;
+    width: 98%;
+
+    @media (min-width: $screen-sm-min) {
+      width: 48%;
+    }
+
+    @media (min-width: $screen-md-min) {
+      width: 48%;
+    }
+  }
+}
+
+.welcome.contact {
+  .contact-tile {
+    max-width: 656px;
+    margin: auto;
+  }
+
+  .instagram-tile {
+    margin: auto;
+    text-align: center;
+    max-width: 656px;
+    margin-top: 3em;
+  }
+}
+
+.welcome.resume {
+  .resume-holder {
+    width: 100%;
+    height: 0;
+    padding-bottom: 134%;
+    overflow-y: hidden;
+  }
+
+  .resume-iframe {
+    width: 100%;
+    height: 1000px;
+  }
+}
