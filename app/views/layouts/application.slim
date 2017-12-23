@@ -22,14 +22,17 @@ html
               span.icon-bar
               span.icon-bar
           #myNavbar.collapse.navbar-collapse
+            .navbar-left
+              = link_to root_path, class: "no-hover-style" do
+                = image_tag("cartilage-c.png", class: "navbar-c")
             .navbar-right
               ul.nav.navbar-nav
                 li class="#{'active' if current_page?(root_path)}" = link_to "home", root_path
                 li class="#{'active' if current_page?(about_path)}" = link_to "about", about_path
-                li class="#{'active' if current_page?(video_path)}" = link_to "video", video_path
-                li class="#{'active' if current_page?(contact_path)}" = link_to "contact", contact_path
-                li = link_to "Twitter", "https://www.twitter.com/mrianlockwood", target: "_blank"
-                li = link_to "Instagram", "https://www.instagram.com/mrianlockwood", target: "_blank"
+                //li class="#{'active' if current_page?(video_path)}" = link_to "video", video_path
+                li class="#{'active' if current_page?(new_message_path)}" = link_to "contact us", new_message_path
+                li = link_to "Twitter", "https://twitter.com/CartilageFilms", target: "_blank"
+                li = link_to "Facebook", "https://www.facebook.com/CartilageFilms/", target: "_blank"
 
     .main
       = yield

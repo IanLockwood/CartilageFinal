@@ -185,3 +185,16 @@ input, textarea {
 .header {
   font-style: italic;
 }
+
+.navbar-c {
+  height: 45px;
+  padding-top: 7px;
+
+  @media (max-width: $screen-sm-max) {
+    height: 35px;
+  }
+}
+
+.no-hover-style:hover {
+  background: none !important;
+}

@@ -1,0 +1,27 @@
+.contact-form {
+  input, textarea {
+    width: 100%;
+    margin-bottom: 1em;
+    border: 1px solid $light-grey;
+    padding: 0.5em;
+  }
+
+  textarea {
+    min-height: 150px;
+  }
+
+  .send-button {
+    width: 250px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $light-grey;
+    font-size: 1.5em;
+    color: $wht;
+    font-style: italic;
+    padding: 0.25em;
+
+    &:hover, &:focus {
+      background-color: $grey;
+    }
+  }
+}
