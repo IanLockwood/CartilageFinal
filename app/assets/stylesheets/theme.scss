@@ -112,7 +112,9 @@ nav {
   }
 }
 
-
+input, textarea {
+  display: block;
+}
 
 .text-link {
   color: $grey;

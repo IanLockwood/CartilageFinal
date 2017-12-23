@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get 'contact', to: 'welcome#contact'
   get 'about', to: 'welcome#about'
 
-  root 'welcome#index'
+  get 'contact-me', to: 'messages#new', as: 'new_message'
+  post 'contact-me', to: 'messages#create', as: 'create_message'
 
-  resources "contacts", only: [:new, :create]
+  root 'welcome#index'
 end
