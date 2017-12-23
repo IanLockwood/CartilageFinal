@@ -35,6 +35,8 @@ gem 'momentjs-rails' # Dependency of bootstrap3-datetimepicker-rails
 gem 'bootstrap3-datetimepicker-rails'
 gem 'bootstrap-editable-rails'
 gem 'bootstrap-select-rails', git: 'https://github.com/Slashek/bootstrap-select-rails.git'
+gem 'simple_form'
+gem 'mail_form'
   # wait for PR merge: https://github.com/Slashek/bootstrap-select-rails/pull/26
 gem 'rails-timeago'
 gem 'lightbox2-rails'
