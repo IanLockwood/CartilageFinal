@@ -1,4 +1,5 @@
-.contact-form {
+.contact-form,
+.film-form {
   input, textarea {
     width: 100%;
     margin-bottom: 1em;
@@ -10,7 +11,14 @@
     min-height: 150px;
   }
 
-  .send-button {
+  label {
+    text-transform: uppercase;
+    text-align: left;
+    float: left;
+  }
+
+  .send-button,
+  .submit-button {
     width: 250px;
     text-align: center;
     text-transform: uppercase;

@@ -198,3 +198,25 @@ input, textarea {
 .no-hover-style:hover {
   background: none !important;
 }
+
+.inline-block {
+  display: inline-block !important;
+}
+
+.display-block {
+  display: block !important;
+}
+
+.checkbox-inline {
+  display: inline-block !important;
+  width: 20px !important;
+  float: left;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.row {
+  margin: 0 !important;
+}

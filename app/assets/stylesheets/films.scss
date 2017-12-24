@@ -1,0 +1,21 @@
+.film-block {
+  img {
+    width: 100%;
+  }
+
+  .film-title-block {
+    height: 6em;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: $grey;
+  }
+
+  a {
+    .film-title-block {
+      text-decoration: none;
+      color: $grey;
+    }
+  }
+}

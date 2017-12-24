@@ -1,0 +1,55 @@
+.row
+  .col-xs-12.col-sm-10.col-sm-offset-1
+    .content-tile.p-a-1
+      h1.m-b-1.header Edit #{@film.name}
+      .film-form.p-a-1
+        = form_for @film do |f|
+          .row
+            .col-xs-12
+              = f.label "Film Name"
+              = f.text_field :name
+
+              = f.label "Film Synopsis"
+              = f.text_area :synopsis
+
+              = f.label "Trailer Url"
+              = f.text_field :trailer_url, placeholder: "ex: http://www.youtube.com/9212019"
+
+              = f.label "Poster Url"
+              = f.text_field :poster_url, placeholder: "ex: http://www.imagehost.com/img/9212019"
+
+              = f.label "Press Url"
+              = f.text_field :press_url, placeholder: "ex: http://www.dropbox.com/9212019"
+
+              = f.label "Release Date"
+              = f.text_field :release_date
+
+              = f.label "Theater Dates"
+              = f.text_area :theater_dates
+
+              = f.label "Past Dates"
+              = f.text_area :past_dates
+
+          .row
+            .col-xs-12
+              = f.check_box :featured, class: "checkbox-inline"
+              = f.label "Feature this film on the homepage and elsewhere?"
+
+          .row
+            .col-xs-12
+              = f.check_box :archived, class: "checkbox-inline"
+              = f.label "Archive this film?"
+
+          .row
+            .col-xs-12
+              = f.check_box :film_page, class: "checkbox-inline"
+              = f.label "Should this film have a page on Cartilage Films?"
+
+          .row
+            .col-xs-12
+              = f.label "Off site link (previous checkbox must be unchecked)"
+              = f.text_field :offsite_link, placeholder: "ex: http://www.screenmedia.com/films/9212019"
+
+          .row
+            .col-xs-12
+              = f.submit 'Update Film', class: "submit-button"
