@@ -12,8 +12,11 @@
               = f.label "Film Synopsis"
               = f.text_area :synopsis
 
-              = f.label "Trailer Url"
+              = f.label "YouTube Trailer Url"
               = f.text_field :trailer_url, placeholder: "ex: http://www.youtube.com/9212019"
+
+              .tip This is located in YouTube's embed code. Click "share" on a YouTube video, then embed, and then find the url within the embed code. For example:
+              .tip.m-b-2 &lt;iframe width="560" height="315" src="<b>https://www.youtube.com/embed/sAryMieZcuo</b>" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;
 
               = f.label "Poster Url"
               = f.text_field :poster_url, placeholder: "ex: http://www.imagehost.com/img/9212019"
