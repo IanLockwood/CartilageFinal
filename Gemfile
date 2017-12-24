@@ -46,6 +46,7 @@ gem 'browser'
 gem 'kaminari'
 gem 'pry'
 gem 'pg'
+gem 'bcrypt'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
