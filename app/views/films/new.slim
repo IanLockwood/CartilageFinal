@@ -10,13 +10,13 @@
               = f.text_field :name
 
               = f.label "Film Synopsis"
-              = f.text_area :synopsis
+              = f.text_area :synopsis, placeholder: "Surround italicized text with <i></i>."
 
               = f.label "Youtube Trailer Url"
               = f.text_field :trailer_url, placeholder: "ex: https://www.youtube.com/embed/sAryMieZcuo"
 
               .tip This is located in YouTube's embed code. Click "share" on a YouTube video, then embed, and then find the url within the embed code. For example:
-              .tip &lt; iframe width="560" height="315" src="https://www.youtube.com/embed/sAryMieZcuo" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;
+              .tip.m-b-2 &lt; iframe width="560" height="315" src="https://www.youtube.com/embed/sAryMieZcuo" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;
 
               = f.label "Poster Url"
               = f.text_field :poster_url, placeholder: "ex: http://www.imagehost.com/img/9212019"
@@ -55,4 +55,4 @@
 
           .row
             .col-xs-12
-              = f.submit 'Add Film', class: "submit-button"
+              = f.submit 'Add Film', class: "button submit-button button--yes"

@@ -7,6 +7,11 @@
     height: 6em;
   }
 
+  .film-poster-block {
+    height: 0;
+    padding-bottom: 148%;
+  }
+
   a:hover {
     text-decoration: none;
     color: $grey;

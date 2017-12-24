@@ -15,3 +15,45 @@
     padding: 0.25em 2em;
   }
 }
+
+.button {
+  width: 250px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $light-grey;
+  font-size: 1.5em;
+  color: $wht;
+  font-style: italic;
+  padding: 0.25em;
+  border: none;
+
+  &:hover, &:focus {
+    color: $wht;
+    background-color: $grey;
+    text-decoration: none;
+  }
+}
+
+.button--yes {
+  background-color: $yes-light-green;
+
+  &:hover, &:focus {
+    background-color: $yes-green;
+  }
+}
+
+.button--maybe {
+  background-color: $maybe-light-yellow;
+
+  &:hover, &:focus {
+    background-color: $maybe-yellow;
+  }
+}
+
+.button--no {
+  background-color: $no-light-red;
+
+  &:hover, &:focus {
+    background-color: $no-red;
+  }
+}

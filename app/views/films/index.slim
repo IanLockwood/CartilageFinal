@@ -1,69 +1,78 @@
 .row
   .col-xs-12.col-sm-10.col-sm-offset-1
     .content-tile
-      h2.header.p-t-1.p-l-1.text-left IN THEATERS & COMING SOON
+
+      = link_to "Add New Film", new_film_path, class: "button button--yes float-right"
+
+      h2.header.text-left IN THEATERS & COMING SOON
       .row
         - @films.each do |film|
           .col-xs-12.col-sm-6.col-md-4
             .film-block
               - if film.film_page == true
                 = link_to film do
-                  - if film.poster_url.blank?
-                    = image_tag("artsoon.jpg")
-                  - else
-                    = image_tag(film.poster_url)
+                  .film-poster-block
+                    - if film.poster_url.blank?
+                      = image_tag("artsoon.jpg")
+                    - else
+                      = image_tag(film.poster_url)
                 .film-title-block
                   = link_to film do
                     h3.header = film.name
 
               - elsif !film.offsite_link.blank?
-                = link_to film.offsite_link do
+                = link_to film.offsite_link, target: "_blank" do
+                  .film-poster-block
+                    - if film.poster_url.blank?
+                      = image_tag("artsoon.jpg")
+                    - else
+                      = image_tag(film.poster_url)
+                .film-title-block
+                  = link_to film.offsite_link, target: "_blank" do
+                    h3.header = film.name
+
+              - else
+                .film-poster-block
                   - if film.poster_url.blank?
                     = image_tag("artsoon.jpg")
                   - else
                     = image_tag(film.poster_url)
                 .film-title-block
-                  = link_to film.offsite_link do
-                    h3.header = film.name
-
-              - else
-                - if film.poster_url.blank?
-                  = image_tag("artsoon.jpg")
-                - else
-                  = image_tag(film.poster_url)
-                .film-title-block
                   h3.header = film.name
 
 
-      h2.header.p-l-1.text-left PAST RELEASES
+      h2.header.text-left PAST RELEASES
       .row
         - @archived_films.each do |film|
           .col-xs-12.col-sm-6.col-md-4
             .film-block
               - if film.film_page == true
                 = link_to film do
-                  - if film.poster_url.blank?
-                    = image_tag("artsoon.jpg")
-                  - else
-                    = image_tag(film.poster_url)
+                  .film-poster-block
+                    - if film.poster_url.blank?
+                      = image_tag("artsoon.jpg")
+                    - else
+                      = image_tag(film.poster_url)
                 .film-title-block
                   = link_to film do
                     h3.header = film.name
 
               - elsif !film.offsite_link.blank?
-                = link_to film.offsite_link do
+                = link_to film.offsite_link, target: "_blank" do
+                  .film-poster-block
+                    - if film.poster_url.blank?
+                      = image_tag("artsoon.jpg")
+                    - else
+                      = image_tag(film.poster_url)
+                .film-title-block
+                  = link_to film.offsite_link, target: "_blank" do
+                    h3.header = film.name
+
+              - else
+                .film-poster-block
                   - if film.poster_url.blank?
                     = image_tag("artsoon.jpg")
                   - else
                     = image_tag(film.poster_url)
-                .film-title-block
-                  = link_to film.offsite_link do
-                    h3.header = film.name
-
-              - else
-                - if film.poster_url.blank?
-                  = image_tag("artsoon.jpg")
-                - else
-                  = image_tag(film.poster_url)
                 .film-title-block
                   h3.header = film.name

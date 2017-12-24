@@ -2,32 +2,40 @@ row
   .col-xs-12.col-sm-10.col-sm-offset-1
     .content-tile
       .row
+        .col-xs-12.m-b-1
+          = link_to "Edit Film", edit_film_path(@film), class: "button button--maybe float-right"
+
+      .row
+        .col-xs-12.m-b-1
+          = button_to "Delete Film", @film, method: :delete,
+          class: "button submit-button button--no float-right",
+          data: { confirm: "Are you sure you want to delete #{@film.name}?" }
+
+      .row
         .col-xs-12.col-sm-6.col-md-5
-          .p-a-1
-            - if @film.poster_url.blank?
-              = image_tag("artsoon.jpg")
-            - else
-              = image_tag(@film.poster_url)
+          - if @film.poster_url.blank?
+            = image_tag("artsoon.jpg", class: "full-width")
+          - else
+            = image_tag(@film.poster_url, class: "full-width")
 
-            - unless @film.release_date.blank?
-              h3.header = @film.release_date
+          - unless @film.release_date.blank?
+            h3.header = @film.release_date
 
-            - unless @film.theater_dates.blank?
-              h3.header Theaters
-              = simple_format(@film.theater_dates)
+          - unless @film.theater_dates.blank?
+            h3.header Theaters
+            = simple_format(@film.theater_dates)
 
-            - unless @film.past_dates.blank?
-              h3.header Past Cities and Theaters
-              = simple_format(@film.past_dates)
+          - unless @film.past_dates.blank?
+            h3.header Past Cities and Theaters
+            = simple_format(@film.past_dates)
 
         .col-xs-12.col-sm-6.col-md-7
-          .p-a-1
-            - unless @film.trailer_url.blank?
-              .video-container
-                <iframe width="100%" height="100%" src="#{@film.trailer_url}" frameborder="0" allowfullscreen></iframe>
+          - unless @film.trailer_url.blank?
+            .video-container
+              <iframe width="100%" height="100%" src="#{@film.trailer_url}" frameborder="0" allowfullscreen></iframe>
 
-            - unless @film.synopsis.blank?
-              = simple_format(@film.synopsis)
+          - unless @film.synopsis.blank?
+            = simple_format(@film.synopsis)
 
-            - unless @film.press_url.blank?
-              h3.header = link_to "Press Link", @film.press_url
+          - unless @film.press_url.blank?
+            h3.header = link_to "Press Link", @film.press_url

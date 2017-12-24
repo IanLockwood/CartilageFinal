@@ -10,7 +10,7 @@
               = f.text_field :name
 
               = f.label "Film Synopsis"
-              = f.text_area :synopsis
+              = f.text_area :synopsis, placeholder: "Surround italicized text with <i></i>."
 
               = f.label "YouTube Trailer Url"
               = f.text_field :trailer_url, placeholder: "ex: http://www.youtube.com/9212019"
@@ -55,4 +55,4 @@
 
           .row
             .col-xs-12
-              = f.submit 'Update Film', class: "submit-button"
+              = f.submit 'Update Film', class: "button submit-button button--yes"
