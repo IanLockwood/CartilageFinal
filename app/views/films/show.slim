@@ -7,7 +7,7 @@ row
           h3.header.sentence-case This is a preview of this film's film page. You are seeing this page because you are an admin who may need to edit or delete this film. Currently, clicking this page's poster or title on the FILMS page opens <a href="#{@film.offsite_link}" target="_blank">#{@film.offsite_link}</a> in a new tab.
 
         - else
-        
+
           h3.header.sentence-case This is a preview of this film's film page. You are seeing this page because you are an admin who may need to edit or delete this film. Currently, this page's poster and title on the FILMS page aren't clickable.
 
       .row
@@ -47,4 +47,4 @@ row
             = simple_format(@film.synopsis)
 
           - unless @film.press_url.blank?
-            h3.header = link_to "Press Link", @film.press_url
+            h3.header = link_to "Press Link", @film.press_url, target: "_blank"
