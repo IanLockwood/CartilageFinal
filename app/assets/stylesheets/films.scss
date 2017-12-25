@@ -1,4 +1,6 @@
 .film-block {
+  position: relative;
+
   img {
     width: 100%;
   }
@@ -23,4 +25,14 @@
       color: $grey;
     }
   }
+}
+
+.admin-featured-tag {
+  background-color: rgba(100, 100, 100, 0.8);
+  color: $wht;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-style: italic;
+  position: absolute;
+  width: 100%;
 }

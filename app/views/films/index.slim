@@ -9,6 +9,9 @@
         - @films.each do |film|
           .col-xs-12.col-sm-6.col-md-4
             .film-block
+              - if admin? && film.featured == true
+                .admin-featured-tag Featured
+                
               - if film.film_page == true
                 = link_to film do
                   .film-poster-block

@@ -4,7 +4,7 @@
       h1.m-b-1.header Contact Us
       .contact-form.p-a-1
         = form_for @message, url: create_message_url do |f|
-          = notice
+          //= notice
           = @message.errors.full_messages.join(', ')
 
           .row

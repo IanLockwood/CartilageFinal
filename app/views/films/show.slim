@@ -1,6 +1,15 @@
 row
   .col-xs-12.col-sm-10.col-sm-offset-1
     .content-tile
+      - if admin? && !@film.film_page
+
+        - if !@film.offsite_link.blank?
+          h3.header.sentence-case This is a preview of this film's film page. You are seeing this page because you are an admin who may need to edit or delete this film. Currently, clicking this page's poster or title on the FILMS page opens <a href="#{@film.offsite_link}" target="_blank">#{@film.offsite_link}</a> in a new tab.
+
+        - else
+        
+          h3.header.sentence-case This is a preview of this film's film page. You are seeing this page because you are an admin who may need to edit or delete this film. Currently, this page's poster and title on the FILMS page aren't clickable.
+
       .row
         .col-xs-12.m-b-1
           = link_to "Edit Film", edit_film_path(@film), class: "button button--maybe float-right"

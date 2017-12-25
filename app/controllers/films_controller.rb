@@ -5,7 +5,11 @@ class FilmsController < ApplicationController
   end
 
   def new
-    @film = Film.new
+    if admin?
+      @film = Film.new
+    else
+      redirect_to root_url
+    end
   end
 
   def create
@@ -26,7 +30,11 @@ class FilmsController < ApplicationController
   end
 
   def edit
-    @film = Film.find(params[:id])
+    if admin?
+      @film = Film.find(params[:id])
+    else
+      redirect_to root_url
+    end
   end
 
   def update
