@@ -11,8 +11,8 @@
             .film-block
               - if admin? && film.featured == true
                 .admin-featured-tag Featured
-                
-              - if film.film_page == true
+
+              - if film.film_page == true || admin?
                 = link_to film do
                   .film-poster-block
                     - if film.poster_url.blank?
@@ -49,7 +49,10 @@
         - @archived_films.each do |film|
           .col-xs-12.col-sm-6.col-md-4
             .film-block
-              - if film.film_page == true
+              - if admin? && film.featured == true
+                .admin-featured-tag Featured
+
+              - if film.film_page == true || admin?
                 = link_to film do
                   .film-poster-block
                     - if film.poster_url.blank?
