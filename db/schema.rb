@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171224182118) do
+ActiveRecord::Schema.define(version: 20180226012830) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20171224182118) do
     t.boolean  "featured",      default: false
     t.boolean  "film_page",     default: false
     t.string   "offsite_link"
+    t.integer  "order_sort",    default: 0
   end
 
   create_table "users", force: :cascade do |t|

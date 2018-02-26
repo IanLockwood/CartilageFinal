@@ -24,6 +24,11 @@
               = f.label "Press Url"
               = f.text_field :press_url, placeholder: "ex: http://www.dropbox.com/9212019"
 
+              = f.label "Sort Order"
+              = f.number_field :order_sort
+
+              .tip.m-b-2 Higher numbers appear higher on the index page.
+
               = f.label "Release Date"
               = f.text_field :release_date
 

@@ -1,7 +1,7 @@
 class FilmsController < ApplicationController
   def index
-    @films = Film.all.where(archived: false)
-    @archived_films = Film.all.where(archived: true)
+    @films = Film.all.where(archived: false).order("order_sort DESC")
+    @archived_films = Film.all.where(archived: true).order("order_sort DESC")
   end
 
   def new
@@ -75,7 +75,8 @@ class FilmsController < ApplicationController
         :featured,
         :archived,
         :film_page,
-        :offsite_link
+        :offsite_link,
+        :order_sort
       )
   end
 end
