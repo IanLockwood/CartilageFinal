@@ -1,7 +1,7 @@
 class FilmsController < ApplicationController
   def index
     @films = Film.all.where(archived: false).order("order_sort DESC")
-    @archived_films = Film.all.where(archived: true).order("order_sort DESC")
+    @archived_films = Film.all.where(archived: true).order("name DESC")
   end
 
   def new
