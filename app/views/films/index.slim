@@ -2,7 +2,8 @@
   .col-xs-12.col-sm-10.col-sm-offset-1
     .content-tile
 
-      = link_to "Add New Film", new_film_path, class: "button button--yes float-right"
+      - if admin?
+        = link_to "Add New Film", new_film_path, class: "button button--yes float-right"
 
       h2.header.text-left IN THEATERS & COMING SOON
       .row
