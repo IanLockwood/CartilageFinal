@@ -1,4 +1,4 @@
-SMTP_SETTINGS = {
+ActionMailer::Base.smtp_settings = {
   address: ENV.fetch("SMTP_ADDRESS"), # example: "smtp.sendgrid.net"
   authentication: :plain,
   domain: ENV.fetch("SMTP_DOMAIN"), # example: "heroku.com"
