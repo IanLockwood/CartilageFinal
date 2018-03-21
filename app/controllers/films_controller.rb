@@ -26,7 +26,7 @@ class FilmsController < ApplicationController
   end
 
   def show
-    @film = Film.find(params[:id])
+    @film = Film.friendly.find(params[:id])
   end
 
   def edit

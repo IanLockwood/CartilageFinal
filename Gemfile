@@ -36,22 +36,19 @@ gem 'bootstrap3-datetimepicker-rails'
 gem 'bootstrap-editable-rails'
 gem 'bootstrap-select-rails', git: 'https://github.com/Slashek/bootstrap-select-rails.git'
 gem 'simple_form'
-  # wait for PR merge: https://github.com/Slashek/bootstrap-select-rails/pull/26
 gem 'rails-timeago'
 gem 'lightbox2-rails'
 gem 'gon'
 gem 'twitter-typeahead-rails', :git => "https://github.com/yourabi/twitter-typeahead-rails.git"
-  # We need this merged PR: https://github.com/yourabi/twitter-typeahead-rails/pull/22
 gem 'browser'
 gem 'kaminari'
 gem 'pry'
 gem 'pg'
 gem 'bcrypt'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'friendly_id', '~> 5.1.0'
 
 group :development, :test do
+  gem 'dotenv-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end

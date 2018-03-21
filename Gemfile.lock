@@ -78,11 +78,17 @@ GEM
     coffee-script-source (1.11.1)
     concurrent-ruby (1.0.2)
     debug_inspector (0.0.2)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.14)
     font-awesome-sass (4.7.0)
       sass (>= 3.2)
+    friendly_id (5.1.0)
+      activerecord (>= 4.0.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     gon (6.1.0)
@@ -227,7 +233,9 @@ DEPENDENCIES
   browser
   byebug
   coffee-rails (~> 4.2)
+  dotenv-rails
   font-awesome-sass
+  friendly_id (~> 5.1.0)
   gon
   jbuilder (~> 2.5)
   jquery-rails
