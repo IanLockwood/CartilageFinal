@@ -31,14 +31,14 @@ class FilmsController < ApplicationController
 
   def edit
     if admin?
-      @film = Film.find(params[:id])
+      @film = Film.friendly.find(params[:id])
     else
       redirect_to root_url
     end
   end
 
   def update
-    @film = Film.find(params[:id])
+    @film = Film.friendly.find(params[:id])
 
     if @film.update(film_params)
         redirect_to(
@@ -51,7 +51,7 @@ class FilmsController < ApplicationController
   end
 
   def destroy
-    film = Film.find(params[:id])
+    film = Film.friendly.find(params[:id])
       film.destroy!
 
       redirect_to(
